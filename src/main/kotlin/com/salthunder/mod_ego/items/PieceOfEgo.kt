@@ -10,7 +10,12 @@ import net.minecraft.item.ItemStack
 import net.minecraft.server.network.ServerPlayerEntity
 import net.minecraft.world.World
 
-class PieceOfEgo(foodComponent: FoodComponent, private val value: Int, private val extraEffects: (LivingEntity) -> Unit): Item(FabricItemSettings().food(foodComponent).group(FOOD_GROUP)) {
+class PieceOfEgo(
+    foodComponent: FoodComponent,
+    private val value: Int,
+    maxCount: Int = 16,
+    private val extraEffects: (LivingEntity) -> Unit
+) : Item(FabricItemSettings().food(foodComponent).group(FOOD_GROUP).maxCount(maxCount)) {
     override fun finishUsing(stack: ItemStack?, world: World?, user: LivingEntity?): ItemStack {
         if (user is ServerPlayerEntity) {
             user.increaseStat(EgoStatisticIdentifiers.EGO_CONSUMPTION.identifier, value)
