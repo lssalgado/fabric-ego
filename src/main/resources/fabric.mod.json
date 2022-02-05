@@ -19,7 +19,7 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.salthunder.mod_ego.ModName"
+        "value": "com.salthunder.mod_ego.Ego"
       }
     ]
   },

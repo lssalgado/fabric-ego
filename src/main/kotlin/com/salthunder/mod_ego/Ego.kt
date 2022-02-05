@@ -15,7 +15,7 @@ import net.minecraft.util.registry.Registry
 
 
 @Suppress("UNUSED")
-object ModName : ModInitializer {
+object Ego : ModInitializer {
     private const val mod_ego = "mod_ego"
 
     private val ITEM_GROUP = FabricItemGroupBuilder.build(Identifier(mod_ego, "general")) { ItemStack(Blocks.COBBLESTONE) }

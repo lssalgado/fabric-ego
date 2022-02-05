@@ -1,6 +1,6 @@
 package com.salthunder.mod_ego.items
 
-import com.salthunder.mod_ego.ModName.FOOD_GROUP
+import com.salthunder.mod_ego.Ego.FOOD_GROUP
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.LivingEntity
 import net.minecraft.item.FoodComponent
