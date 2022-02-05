@@ -12,6 +12,7 @@ class SpeedEffect : StatusEffect(StatusEffectCategory.BENEFICIAL, 0x141213) {
 
     init {
         addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "380cf1e0-50a6-4f91-a861-558350993f94", 0.2, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+
     }
 
     var counter = 0

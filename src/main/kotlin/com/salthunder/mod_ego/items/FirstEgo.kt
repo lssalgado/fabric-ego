@@ -32,13 +32,11 @@ class FirstEgo(settings: Settings): Item(settings) {
             user.attributes.addTemporaryModifiers(multimapBuilder.build())
 
             user.sendMessage(Text.of("MS = '${user.movementSpeed}'"), false)
-            user.sendMessage(Text.of("MS = '${user.movementSpeed}'"), false)
         } else {
             user.sendMessage(Text.of("Hand = '${hand.toString()}'"), false)
             user.addStatusEffect(
                 StatusEffectInstance(StatusEffects.SPEED, 3000, 5)
             )
-            user.sendMessage(Text.of("MS = '${user.movementSpeed}'"), false)
             user.sendMessage(Text.of("MS = '${user.movementSpeed}'"), false)
         }
         return TypedActionResult.success(user.getStackInHand(hand))
