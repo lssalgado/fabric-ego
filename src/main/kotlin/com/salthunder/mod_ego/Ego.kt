@@ -30,10 +30,20 @@ object Ego : ModInitializer {
 
     override fun onInitialize() {
         println("Example mod has been initialized.")
+        registerStatistics()
         registerItems()
         registerTools()
         registerPieces()
         registerStatus()
+    }
+
+    private fun registerStatisticIdentifier(statisticIdentifier: EgoStatisticIdentifiers.StatisticIdentifier) {
+        Registry.register(Registry.CUSTOM_STAT, statisticIdentifier.path, statisticIdentifier.identifier)
+    }
+
+    private fun registerStatistics() {
+        registerStatisticIdentifier(EgoStatisticIdentifiers.EGO_CONSUMPTION)
+        Stats.CUSTOM.getOrCreateStat(EgoStatisticIdentifiers.EGO_CONSUMPTION.identifier, StatFormatter.DEFAULT)
     }
 
     private fun registerStatus() {
