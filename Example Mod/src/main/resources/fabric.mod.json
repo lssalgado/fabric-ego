@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "mod_id",
+  "id": "mod_ego",
   "version": "${version}",
   "name": "Mod Name",
   "description": "Mod Description",
@@ -13,18 +13,18 @@
     "sources": "https://example.com/"
   },
   "license": "GNU Lesser General Public License version 3 (LGPLv3)",
-  "icon": "assets/mod_name/icon.png",
+  "icon": "assets/ego/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.mod_author.mod_id.ModName"
+        "value": "com.salthunder.mod_ego.ModName"
       }
     ]
   },
   "mixins": [
-    "mod_id.mixins.json"
+    "mod_ego.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.12.12",

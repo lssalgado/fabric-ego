@@ -1,4 +1,4 @@
-package com.mod_author.mod_id.statuseffects
+package com.salthunder.mod_ego.statuseffects
 
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.attribute.EntityAttributeModifier

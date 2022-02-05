@@ -1,7 +1,6 @@
-package com.mod_author.mod_id.items
+package com.salthunder.mod_ego.items
 
 import com.google.common.collect.ImmutableMultimap
-import com.mod_author.mod_id.statuseffects.SpeedEffect
 import net.minecraft.entity.attribute.EntityAttribute
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
