@@ -11,16 +11,18 @@ import net.minecraft.block.Blocks
 import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
 import net.minecraft.item.Items
+import net.minecraft.stat.StatFormatter
+import net.minecraft.stat.Stats
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 
 
 @Suppress("UNUSED")
 object Ego : ModInitializer {
-    private const val mod_ego = "mod_ego"
+    const val EGO_ID = "mod_ego"
 
-    private val ITEM_GROUP = FabricItemGroupBuilder.build(Identifier(mod_ego, "general")) { ItemStack(Blocks.COBBLESTONE) }
-    val FOOD_GROUP: ItemGroup = FabricItemGroupBuilder.build(Identifier(mod_ego, "foods")) { ItemStack(Items.BOWL) }
+    private val ITEM_GROUP = FabricItemGroupBuilder.build(Identifier(EGO_ID, "general")) { ItemStack(Blocks.COBBLESTONE) }
+    val FOOD_GROUP: ItemGroup = FabricItemGroupBuilder.build(Identifier(EGO_ID, "foods")) { ItemStack(Items.BOWL) }
 
     private val EGO_SPEED = FirstEgo(FabricItemSettings().group(ITEM_GROUP))
 
