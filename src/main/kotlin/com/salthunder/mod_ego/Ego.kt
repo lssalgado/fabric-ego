@@ -2,6 +2,7 @@ package com.salthunder.mod_ego
 
 import com.salthunder.mod_ego.items.EgoPieces
 import com.salthunder.mod_ego.items.FirstEgo
+import com.salthunder.mod_ego.keybindings.EgoKeyBindings.registerKeyBindings
 import com.salthunder.mod_ego.statistics.EgoStatisticIdentifiers
 import com.salthunder.mod_ego.statuseffects.SpeedEffect
 import net.fabricmc.api.ModInitializer
@@ -11,8 +12,6 @@ import net.minecraft.block.Blocks
 import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
 import net.minecraft.item.Items
-import net.minecraft.stat.StatFormatter
-import net.minecraft.stat.Stats
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 
@@ -35,6 +34,7 @@ object Ego : ModInitializer {
         registerTools()
         registerPieces()
         registerStatus()
+        registerKeyBindings()
     }
 
     private fun registerStatistics() {
