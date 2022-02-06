@@ -37,13 +37,8 @@ object Ego : ModInitializer {
         registerStatus()
     }
 
-    private fun registerStatisticIdentifier(statisticIdentifier: EgoStatisticIdentifiers.StatisticIdentifier) {
-        Registry.register(Registry.CUSTOM_STAT, statisticIdentifier.path, statisticIdentifier.identifier)
-    }
-
     private fun registerStatistics() {
-        registerStatisticIdentifier(EgoStatisticIdentifiers.EGO_CONSUMPTION)
-        Stats.CUSTOM.getOrCreateStat(EgoStatisticIdentifiers.EGO_CONSUMPTION.identifier, StatFormatter.DEFAULT)
+        EgoStatisticIdentifiers.register()
     }
 
     private fun registerStatus() {
