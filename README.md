@@ -1,2 +1,2 @@
-# Example Mod
-This is an example mod for Kotlin.
+# Ego
+How about consuming your way to unlimited power?

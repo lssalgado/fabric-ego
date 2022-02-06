@@ -1,4 +1,11 @@
 {
-  "item.ego.speed_item" : "speed item",
-  "effect.ego.speed": "speeeeeed"
+  "item.mod_ego.speed_item" : "speed item",
+  "item.mod_ego.zombie_ego" : "zombie piece",
+  "effect.mod_ego.speed": "speeeeeed",
+  "stat.mod_ego.ego_consumption": "Ego - Amount consumed by you",
+  "stat.mod_ego.ego_points": "Ego - Points earned in total",
+  "stat.mod_ego.ego_points_spent": "Ego - Points spent",
+  "stat.mod_ego.ego_points_unspent": "Ego - Points unspent",
+  "key.ego.open_interface":  "Open Interface",
+  "category.ego.menu":  "Ego"
 }

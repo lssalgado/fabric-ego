@@ -2,6 +2,8 @@ package com.salthunder.mod_ego
 
 import com.salthunder.mod_ego.items.EgoPieces
 import com.salthunder.mod_ego.items.FirstEgo
+import com.salthunder.mod_ego.keybindings.EgoKeyBindings.registerKeyBindings
+import com.salthunder.mod_ego.statistics.EgoStatisticIdentifiers
 import com.salthunder.mod_ego.statuseffects.SpeedEffect
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
@@ -15,11 +17,11 @@ import net.minecraft.util.registry.Registry
 
 
 @Suppress("UNUSED")
-object ModName : ModInitializer {
-    private const val mod_ego = "mod_ego"
+object Ego : ModInitializer {
+    const val EGO_ID = "mod_ego"
 
-    private val ITEM_GROUP = FabricItemGroupBuilder.build(Identifier(mod_ego, "general")) { ItemStack(Blocks.COBBLESTONE) }
-    val FOOD_GROUP: ItemGroup = FabricItemGroupBuilder.build(Identifier(mod_ego, "foods")) { ItemStack(Items.BOWL) }
+    private val ITEM_GROUP = FabricItemGroupBuilder.build(Identifier(EGO_ID, "general")) { ItemStack(Blocks.COBBLESTONE) }
+    val FOOD_GROUP: ItemGroup = FabricItemGroupBuilder.build(Identifier(EGO_ID, "foods")) { ItemStack(Items.BOWL) }
 
     private val EGO_SPEED = FirstEgo(FabricItemSettings().group(ITEM_GROUP))
 
@@ -27,10 +29,16 @@ object ModName : ModInitializer {
 
     override fun onInitialize() {
         println("Example mod has been initialized.")
+        registerStatistics()
         registerItems()
         registerTools()
         registerPieces()
         registerStatus()
+        registerKeyBindings()
+    }
+
+    private fun registerStatistics() {
+        EgoStatisticIdentifiers.register()
     }
 
     private fun registerStatus() {
